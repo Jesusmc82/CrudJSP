@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+        <title>Agrega Usuaria</title>
+        <script type="text/javascript" src="scripts.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="bg">
+            <h1>MisMatronas.com</h1>
+            <h3>Agregue una nueva usuaria:</h3>
+            <a href=index.jsp><button class="button2" width="80%">Pagina Principal</button></a>
+            <div class="container">
+                <div class="row">
+                    <form method="get" action="AgregaUsuaria.jsp">
+
+                        <div class="col-md-10 col-md-offset-10">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">DNI</span>
+                                    <input type="text" name="DNI" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Nombre</span>
+                                    <input type="text" name="Nombre" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Apellidos</span>
+                                    <input type="text" name="Apellidos" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Direccion</span>
+                                    <input type="text" name="Direccion" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Telefono</span>
+                                    <input type="text" name="Telefono" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">NHC</span>
+                                    <input type="text" name="NHC" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Evolucion</span>
+                                    <input type="text" name="Evolucion" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Observaciones</span>
+                                    <input type="text" name="Observaciones" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+                                </div>
+                                <button type="submit" class="btn btn-success">Aceptar</button>
+                                <button type="button" class="btn btn-danger" onclick="cancelar()">Cancelar</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
