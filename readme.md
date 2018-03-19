@@ -1,7 +1,7 @@
 El proyecto se basará en la gestión de la base de datos de clientas para una clínica de matronas, que se llamará mismatronas.com, proyecto que en un futuro se puede convertir en real, proviene de una idea de negocio que tiene una amiga y que me ha propuesto para llevarle a cabo tanto la aplicación de gestión del centro, como la web. En este proyecto nos basaremos ahora mismo únicamente a la aplicación implementada en web.
 
 Portada de la Aplicación:
-(screenshots/Captura de pantalla de 2018-03-19 18-51-08.jpg)
+(screenshots/Portada.jpg)
 Tabla de Usuarias:
 (screenshots/Captura de pantalla de 2018-03-19 18-52-34.png)
 (screenshots/Captura de pantalla de 2018-03-19 18-53-07.png)
