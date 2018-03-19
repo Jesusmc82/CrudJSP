@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : jesus
 */
 h1 {
+    color: blue !important;
     text-align: center;
     letter-spacing: 3px;
     text-shadow: 3px 2px white;

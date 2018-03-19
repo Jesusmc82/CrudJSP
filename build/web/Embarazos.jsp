@@ -23,6 +23,7 @@
             <h1>MisMatronas.com</h1>
             <h3>Embarazos</h3>
             <a href=index.jsp><button class="button2" width="80%">Pagina Principal</button></a>
+            <a href=NuevoEmbarazo.html><button class="button2" width="80%">Agregar Embarazo</button></a>
 
             <table class="table" border="3" bordercolor="blue">
                 <thead style="background-color: white; opacity: .70">
@@ -48,14 +49,14 @@
                 <td>
                     <form action="Embarazos.jsp">
                         <input type="hidden" name="ID_Embarazos" value="<%=listado.getString("ID_Embarazos")%>" />
-                        <button type='submit' class='btn btn-danger' title="Borrar"><span class="glyphicon glyphicon-remove-sign"></span></button>
+                        <input class="button3" type="submit" value="Borrar">
                     </form>
                     <form method="get" action="Embarazos.jsp">
                         <input type="hidden" name="FPP" value="<%=listado.getString("FPP")%>"/>
                         <input type="hidden" name="NHC" value="<%=listado.getString("NHC")%>">
                         <input type="hidden" name="Pruebas_Diagnosticas" value="<%=listado.getString("Pruebas_Diagnosticas")%>">
                         <input type="hidden" name="Numero_Colegiado" value="<%=listado.getString("Numero_Colegiado")%>">
-                        <button type='submit' class='btn btn-warning' title="Editar"><span class="glyphicon glyphicon-edit"></span></button>
+                        <input class="button3" type="submit" value="Modificar">
                     </form>
                 </td>
                 <%

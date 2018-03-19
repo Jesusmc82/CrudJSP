@@ -1,6 +1,6 @@
 <%-- 
-    Document   : AgregaUsuaria
-    Created on : 15-mar-2018, 9:34:36
+    Document   : AgregaEmbarazo
+    Created on : 19-mar-2018, 17:01:42
     Author     : jesus
 --%>
 <%@page import="java.sql.Statement"%>
@@ -20,7 +20,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-       <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Usuaria.jsp">
+       <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Embarazos.jsp">
     </head>
     <body>
         <div class="bg">
@@ -29,22 +29,12 @@
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas" , "root", "root");
             Statement s = conexion.createStatement();
-
-            String insercion = "INSERT INTO Usuaria (`DNI`, `Nombre`, `Apellidos`, `Nacimiento`, `Direccion`, `Telefono`,`Mail`) VALUES "
-                    + "('" + request.getParameter("DNI") + "', "
-                    + "'" + request.getParameter("Nombre") + "', "
-                    + "'" + request.getParameter("Apellidos") + "', "
-                    + "'" + request.getParameter("Nacimiento") + "', "
-                    + "'" + request.getParameter("Direccion") + "', "
-                    + "'" + request.getParameter("Telefono") + "', "
-                    + "'" + request.getParameter("email") + "') ; " ;
-     
-            s.execute(insercion);
-            String introduccion = "INSERT INTO Historial_Clinico (`NHC`, `Evolucion`, `DNI`, `Observaciones`) VALUES ('"
-                    + Integer.parseInt(request.getParameter("NHC"))
-                    + "', '" + request.getParameter("Evolucion")
-                    + "', '" + request.getParameter("DNI")
-                    + "', '" + request.getParameter("Observaciones")
+            String introduccion = "INSERT INTO Embarazos (`ID_Embarazos`, `FPP`, `NHC`, `Pruebas_Diagnosticas`, `Numero_Colegiado`) VALUES ('"
+                    + request.getParameter("ID_Embarazos")
+                    + "', '" + request.getParameter("FPP")
+                    + "', '" + Integer.parseInt(request.getParameter("NHC"))
+                    + "', '" + request.getParameter("Pruebas_Diagnosticas")
+                    + "', '" + Integer.parseInt(request.getParameter("Numero_Colegiado"))
                     + "')";
             s.execute(introduccion);
             conexion.close();

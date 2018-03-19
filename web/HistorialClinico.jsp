@@ -45,16 +45,16 @@
                             out.println("<td>" + listado.getString("Observaciones") + "</td>");
                     %>
                 <td>
-                    <form action="HistorialClinico.jsp">
-                        <input type="hidden" name="DNI" value="<%=listado.getString("DNI")%>" />
-                        <button type='submit' class='btn btn-danger' title="Borrar"><span class="glyphicon glyphicon-remove-sign"></span></button>
-                    </form>
-                    <form method="get" action="HistorialClinico.jsp">
+                    <form method="get" action="BorraHistorial.jsp">
                         <input type="hidden" name="NHC" value="<%=listado.getString("NHC")%>"/>
-                        <input type="hidden" name="Nombre" value="<%=listado.getString("Evolucion")%>">
-                        <input type="hidden" name="Apellidos" value="<%=listado.getString("DNI")%>">
-                        <input type="hidden" name="Nacimiento" value="<%=listado.getString("Observaciones")%>">
-                        <button type='submit' class='btn btn-warning' title="Editar"><span class="glyphicon glyphicon-edit"></span></button>
+                        <input class="button3" type="submit" value="Borrar">
+                    </form>
+                    <form method="get" action="modificaUsuaria.jsp">
+                        <input type="hidden" name="NHC" value="<%=listado.getString("NHC")%>">
+                        <input type="hidden" name="Evolucion" value="<%=listado.getString("Evolucion")%>">
+                        <input type="hidden" name="DNI" value="<%=listado.getString("DNI")%>">
+                        <input type="hidden" name="Observaciones" value="<%=listado.getString("Observaciones")%>">
+                        <input class="button3" type="submit" value="Modificar">
                     </form>
                 </td>
                 <%

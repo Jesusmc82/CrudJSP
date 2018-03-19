@@ -23,15 +23,17 @@
 
         <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Profesional.jsp"> 
     </head>
-    <body style="background-color: #fadbd8;">
-        <%
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas","root", "root");
-            Statement s = conexion.createStatement();
-            String Numero_Colegiado = request.getParameter("Numero_Colegiado");
-            String query = ("DELETE FROM Usuaria WHERE Numero_Colegiado=" + request.getParameter("Numero_Colegiado")); 
-            s.execute (query);
-            s.close();
-        %>
-        <div class="alert alert-danger" role="alert">Se ha eliminado la usuaria seleccionada</div> 
+    <body>
+        <div class="bg">
+            <%
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas", "root", "root");
+                Statement s = conexion.createStatement();
+                int Numero_Colegiado = Integer.parseInt(request.getParameter("Numero_Colegiado"));
+                String query = "DELETE FROM Profesional WHERE Numero_Colegiado=" + Numero_Colegiado;
+                s.execute(query);
+                s.close();
+            %>
+            <div class="alert alert-danger" role="alert">Se ha eliminado la usuaria seleccionada</div> 
+        </div>
     </body>

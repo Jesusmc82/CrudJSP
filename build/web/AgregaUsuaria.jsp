@@ -20,26 +20,28 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Usuaria.jsp"> 
+       <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Usuaria.jsp">
     </head>
-    <body style="background-color: #fadbd8;">
+    <body>
+        <div class="bg">
         <% request.setCharacterEncoding("UTF-8"); %>
         <%
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas", "root", "root");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas" , "root", "root");
             Statement s = conexion.createStatement();
 
-            String insercion = "INSERT INTO Usuaria (`DNI`, `Nombre`, `Apellidos`, `Direccion`, `Telefono`, `Mail`) VALUES ('"
-                    + request.getParameter("DNI")
-                    + "', '" + request.getParameter("Nombre")
-                    + "', '" + request.getParameter("Apellidos")
-                    + "', '" + request.getParameter("Direccion")
-                    + "', " + request.getParameter("Telefono")
-                    + ", '" + request.getParameter("Mail")
-                    + "')";
+            String insercion = "INSERT INTO Usuaria (`DNI`, `Nombre`, `Apellidos`, `Nacimiento`, `Direccion`, `Telefono`,`Mail`) VALUES "
+                    + "('" + request.getParameter("DNI") + "', "
+                    + "'" + request.getParameter("Nombre") + "', "
+                    + "'" + request.getParameter("Apellidos") + "', "
+                    + "'" + request.getParameter("Nacimiento") + "', "
+                    + "'" + request.getParameter("Direccion") + "', "
+                    + "'" + request.getParameter("Telefono") + "', "
+                    + "'" + request.getParameter("email") + "') ; " ;
+     
             s.execute(insercion);
             String introduccion = "INSERT INTO Historial_Clinico (`NHC`, `Evolucion`, `DNI`, `Observaciones`) VALUES ('"
-                    + request.getParameter("NHC")
+                    + Integer.parseInt(request.getParameter("NHC"))
                     + "', '" + request.getParameter("Evolucion")
                     + "', '" + request.getParameter("DNI")
                     + "', '" + request.getParameter("Observaciones")
@@ -47,7 +49,7 @@
             s.execute(introduccion);
             conexion.close();
         %>
-
-        <div class="alert alert-success" role="alert">Nueva Usuaria</div>        
+        <h3>Nueva Usuaria</h3>
+        </div>
     </body>
 </html>

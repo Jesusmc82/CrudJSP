@@ -3,26 +3,25 @@ El proyecto se basará en la gestión de la base de datos de clientas para una c
 Portada de la Aplicación:
 ![portada](screenshots/Portada.jpg)
 Tabla de Usuarias:
-(screenshots/Captura de pantalla de 2018-03-19 18-52-34.png)
-(screenshots/Captura de pantalla de 2018-03-19 18-53-07.png)
-(screenshots/Captura de pantalla de 2018-03-19 18-53-41.png)
+![usuaria1](screenshots/TablaUsuarias1.jpg)
+![usuaria2](screenshots/TablaUsuarias2.jpg)
+![usuaria3](screenshots/TablaUsuarias3.jpg)
 Tabla de Profesionales:
-(screenshots/Captura de pantalla de 2018-03-19 18-54-07.png)
+![Profesionales](screenshots/TablaProfesionales.jpg)
 Tabla de Embarazos:
-(screenshots/Captura de pantalla de 2018-03-19 18-55-03.png)
+![Embarazos](screenshots/TablaEmbarazos.jpg)
 Tabla del Historial Clinico:
-(screenshots/Captura de pantalla de 2018-03-19 18-55-38.png)
-(screenshots/Captura de pantalla de 2018-03-19 18-56-05.png)
-(screenshots/Captura de pantalla de 2018-03-19 18-59-59.png)
-(screenshots/Captura de pantalla de 2018-03-19 19-00-31.png)
-(screenshots/Captura de pantalla de 2018-03-19 19-01-07.png)
-(screenshots/Captura de pantalla de 2018-03-19 19-01-35.png)
-(screenshots/Captura de pantalla de 2018-03-19 19-02-02.png)
-(screenshots/Captura de pantalla de 2018-03-19 19-03-27.png)
+![Historial_Clinico1](screenshots/HistorialClinico1.jpg)
+![Historial_Clinico2](screenshots/HistorialClinico2.jpg)
+![Historial_Clinico3](screenshots/HistorialClinico3.jpg)
+![Historial_Clinico4](screenshots/HistorialClinico4.jpg)
+![Historial_Clinico5](screenshots/HistorialClinico5.jpg)
+![Historial_Clinico6](screenshots/HistorialClinico6.jpg)
+![Historial_Clinico7](screenshots/HistorialClinico7.jpg)
+![Historial_Clinico8](screenshots/HistorialClinico8.jpg)
 Agregando Usuarias:
-(screenshots/Captura de pantalla de 2018-03-19 19-04-24.png)
-
-(screenshots/Captura de pantalla de 2018-03-19 19-04-56.png)
-
-(screenshots/Captura de pantalla de 2018-03-19 19-05-48.png)
-
+![Agrega_Usuaria1](screenshots/Agregar_Usuarias.jpg)
+Agregar Embarazos:
+![Agregar_Embarazos](screenshots/Agregar_Embarazos.jpg)
+Agregar_Profesional
+![Agrega_Profesional](screenshots/Agregar_Profesional.jpg)

@@ -19,27 +19,28 @@
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Profesional.jsp"> 
+        <META HTTP-EQUIV="REFRESH" CONTENT="5; URL=Profesional.jsp">
     </head>
-    <body style="background-color: #fadbd8;">
-        <% request.setCharacterEncoding("UTF-8"); %>
-        <%
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas","root", "root");
-            Statement s = conexion.createStatement();
-                        
-            String insercion = "INSERT INTO Profesional (`Numero_Colegiado`, `Profesional`, `Nombre`, `Apellidos`) VALUES ('"
-            + Integer.parseInt(request.getParameter("Numero_Colegiado"))
-            + "', '" + request.getParameter("Profesional")
-            + "', '" + request.getParameter("Nombre")
-            + "', '" + request.getParameter("Apellidos")
-            + "')";
-            s.execute(insercion);
-                        
-            conexion.close();
-        %>
+    <body>
+        <div class="bg">
+            <% request.setCharacterEncoding("UTF-8"); %>
+            <%
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas", "root", "root");
+                Statement s = conexion.createStatement();
 
-        <div class="alert alert-success" role="alert">Nuevo Profesional</div>        
+                String ejecucion = "INSERT INTO Profesional (`Numero_Colegiado`, `Profesional`, `Nombre`, `Apellidos`) VALUES ('"
+                        + Integer.parseInt(request.getParameter("Numero_Colegiado"))
+                        + "', '" + request.getParameter("Profesional")
+                        + "', '" + request.getParameter("Nombre")
+                        + "', '" + request.getParameter("Apellidos")
+                        + "')";
+                s.execute(ejecucion);
+                conexion.close();
+
+            %>
+
+            <div class="alert alert-success" role="alert">Nuevo Profesional</div>        
+        </div>
     </body>
 </html>

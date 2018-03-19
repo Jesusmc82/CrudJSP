@@ -65,7 +65,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"bg\">\n");
       out.write("            <h1>MisMatronas.com</h1>\n");
       out.write("            <ul style=\"list-style-type:none\">\n");
-      out.write("                <li><a href=Usuaria.jsp><button class=\"button\"; style=\"left:54%\">Usuaria</button></a></li>\n");
+      out.write("                <li> <a href=Usuaria.jsp> <button class=\"button\"; style=\"left:54%\">Usuaria</button></a></li>\n");
       out.write("                <li><a href=Profesional.jsp><button class=\"button\"; style=\"left:56%\">Profesional</button></a></li>\n");
       out.write("                <li><a href=Embarazos.jsp><button class=\"button\"; style=\"left:58%\">Embarazos</button></a></li>\n");
       out.write("                <li><a href=HistorialClinico.jsp><button class=\"button\"; style=\"left:60%\">Historial Clinico</button></a></li>\n");

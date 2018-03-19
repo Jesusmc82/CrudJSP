@@ -57,28 +57,30 @@ public final class borraProfesional_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>MisMatronas</title>\n");
-      out.write("        \n");
+      out.write("\n");
       out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n");
       out.write("        <script type=\"text/javascript\" src=\"scripts.js\"></script>\n");
-      out.write("        \n");
+      out.write("\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" \n");
-      out.write("        integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n");
-      out.write("        \n");
+      out.write("              integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n");
+      out.write("\n");
       out.write("        <META HTTP-EQUIV=\"REFRESH\" CONTENT=\"5; URL=Profesional.jsp\"> \n");
       out.write("    </head>\n");
-      out.write("    <body style=\"background-color: #fadbd8;\">\n");
-      out.write("        ");
+      out.write("    <body>\n");
+      out.write("        <div class=\"bg\">\n");
+      out.write("            ");
 
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas","root", "root");
-            Statement s = conexion.createStatement();
-            String Numero_Colegiado = request.getParameter("Numero_Colegiado");
-            String query = ("DELETE FROM Usuaria WHERE Numero_Colegiado=" + request.getParameter("Numero_Colegiado")); 
-            s.execute (query);
-            s.close();
-        
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/MisMatronas", "root", "root");
+                Statement s = conexion.createStatement();
+                int Numero_Colegiado = Integer.parseInt(request.getParameter("Numero_Colegiado"));
+                String query = "DELETE FROM Profesional WHERE Numero_Colegiado=" + Numero_Colegiado;
+                s.execute(query);
+                s.close();
+            
       out.write("\n");
-      out.write("        <div class=\"alert alert-danger\" role=\"alert\">Se ha eliminado la usuaria seleccionada</div> \n");
+      out.write("            <div class=\"alert alert-danger\" role=\"alert\">Se ha eliminado la usuaria seleccionada</div> \n");
+      out.write("        </div>\n");
       out.write("    </body>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
