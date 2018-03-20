@@ -27,7 +27,7 @@
                 <li><a href=Embarazo/Embarazos.jsp><button class="button"; style="left:58%">Embarazos</button></a></li>
                 <li><a href=Historial_Clinico/HistorialClinico.jsp><button class="button"; style="left:60%">Historial Clinico</button></a></li>
                 <li><a href=Usuaria/NuevaUsuaria.html><button class="button"; style="left:61%">Nueva Usuaria</button></a></li>
-                <li><a href=Embarazo/NuevoEmbarazo.html><button class="button"; style="left:61%">Nuevo Embarazo</button></a></li>
+                <li><a href=Embarazo/NuevoEmbarazo.jsp><button class="button"; style="left:61%">Nuevo Embarazo</button></a></li>
                 <li><a href=Profesional/NuevoProfesional.html><button class="button"; style="left:61%">Nuevo Profesional</button></a></li>
             </ul>
         </div>

@@ -3,13 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/modificaEmbarazo.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/borraEmbarazo.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/NuevoEmbarazo.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Usuaria/AgregaUsuaria.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Historial_Clinico/BorraHistorial.jsp</file>
             <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/Embarazos.jsp</file>
             <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/AgregaEmbarazo.jsp</file>
-            <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/NuevoEmbarazo.html</file>
-            <file>file:/home/jesus/Escritorio/crudJesus/web/Embarazo/EmbarazoModificado.jsp</file>
             <file>file:/home/jesus/Escritorio/crudJesus/web/index.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Usuaria/NuevaUsuaria.html</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Historial_Clinico/modificaHistorial.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Usuaria/Usuaria.jsp</file>
             <file>file:/home/jesus/Escritorio/crudJesus/web/style.css</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Historial_Clinico/HistorialModificado.jsp</file>
+            <file>file:/home/jesus/Escritorio/crudJesus/web/Historial_Clinico/HistorialClinico.jsp</file>
         </group>
     </open-files>
 </project-private>

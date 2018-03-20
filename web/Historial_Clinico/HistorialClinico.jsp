@@ -22,7 +22,6 @@
             <h1>MisMatronas.com</h1>
             <h3>Historial Clinico</h3>
             <a href=../index.jsp><button class="button2" width="80%">Pagina Principal</button></a>
-            <a href=NuevoHistorial.html><button class="button2" width="80%">Agrega Historial</button></a>
             <table class="table" border="3" bordercolor="blue">
                 <thead>
                     <tr style="background-color: white; opacity: .70">
