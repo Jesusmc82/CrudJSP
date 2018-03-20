@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
         <title>Usuaria</title>
-                <link REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+                <link REL=StyleSheet HREF="../style.css" TYPE="text/css" MEDIA=screen>
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="cerulean">
@@ -22,7 +22,7 @@
         <div class="bg1">
             <h1>MisMatronas.com</h1>
             <h3>Usuarias</h3>
-            <a href=index.jsp><button class="button2" width="80%">Pagina Principal</button></a>
+            <a href=../index.jsp><button class="button2" width="80%">Pagina Principal</button></a>
             <a href=NuevaUsuaria.html><button class="button2" width="80%">Nueva Usuaria</button></a>
             <table class="table" border="3" bordercolor="blue">
                 <thead>

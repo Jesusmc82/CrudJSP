@@ -3,12 +3,12 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.sql.Statement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.sql.DriverManager;
 import java.sql.Connection;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class UsuariaModificada_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -45,7 +45,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -55,27 +55,46 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <LINK REL=StyleSheet HREF=\"style.css\" TYPE=\"text/css\" MEDIA=screen>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=\"UTF-8\">\n");
-      out.write("        <title>Principal</title>\n");
-      out.write("       <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" \n");
+      out.write("        <link REL=\"StyleSheet\" HREF=\"style.css\" TYPE=\"text/css\" MEDIA=\"screen\">\n");
+      out.write("        <title>Modifica Usuaria</title>\n");
+      out.write("        <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" \n");
       out.write("              rel=\"stylesheet\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <div class=\"bg\">\n");
       out.write("            <h1>MisMatronas.com</h1>\n");
-      out.write("            <ul style=\"list-style-type:none\">\n");
-      out.write("                <li> <a href=Usuaria/Usuaria.jsp> <button class=\"button\"; style=\"left:54%\">Usuaria</button></a></li>\n");
-      out.write("                <li><a href=Profesional/Profesional.jsp><button class=\"button\"; style=\"left:56%\">Profesional</button></a></li>\n");
-      out.write("                <li><a href=Embarazo/Embarazos.jsp><button class=\"button\"; style=\"left:58%\">Embarazos</button></a></li>\n");
-      out.write("                <li><a href=Historial_Clinico/HistorialClinico.jsp><button class=\"button\"; style=\"left:60%\">Historial Clinico</button></a></li>\n");
-      out.write("                <li><a href=Usuaria/NuevaUsuaria.html><button class=\"button\"; style=\"left:61%\">Nueva Usuaria</button></a></li>\n");
-      out.write("                <li><a href=Embarazo/NuevoEmbarazo.html><button class=\"button\"; style=\"left:61%\">Nuevo Embarazo</button></a></li>\n");
-      out.write("                <li><a href=Profesional/NuevoProfesional.html><button class=\"button\"; style=\"left:61%\">Nuevo Profesional</button></a></li>\n");
-      out.write("            </ul>\n");
-      out.write("        </div>\n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("            <a href=index.jsp><button class=\"button2\">Pagina Principal</button></a>\n");
+      out.write("            ");
+ request.setCharacterEncoding("UTF-8");
+      out.write("\n");
+      out.write("            <h3>Modificación Usuario</h3>\n");
+      out.write("           ");
+
+      Class.forName("com.mysql.jdbc.Driver");
+      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto","root", "root");
+      Statement s = conexion.createStatement();
+      request.setCharacterEncoding("UTF-8");
+      
+      String actualizacion = "UPDATE socio SET "
+                           + "nombre='" + request.getParameter("nombre")
+                           + "', estatura=" + Integer.valueOf(request.getParameter("estatura"))
+                           + ", edad=" + Integer.valueOf(request.getParameter("edad"))
+                           + ", localidad='" + request.getParameter("localidad")
+                           + "' WHERE socioID=" + Integer.valueOf(request.getParameter("socioID"));
+      s.execute(actualizacion);
+      out.println("Socio actualizado correctamente.");
+      
+      conexion.close();
+    
+      out.write("\n");
+      out.write("    <br>\n");
+      out.write("    <a href=\"index.jsp\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-home\"></span> Página principal</button>\n");
+      out.write("    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n");
+      out.write("    <script src=\"js/jquery.min.js\"></script>\n");
+      out.write("    <script src=\"js/bootstrap.min.js\"></script>\n");
+      out.write("  </body>\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

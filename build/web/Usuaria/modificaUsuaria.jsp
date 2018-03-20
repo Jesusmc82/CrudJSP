@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
-        <link REL="StyleSheet" HREF="style.css" TYPE="text/css" MEDIA="screen">
+        <link REL="StyleSheet" HREF="../style.css" TYPE="text/css" MEDIA="screen">
         <title>Modifica Usuaria</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
               rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -21,7 +21,7 @@
     <body>
         <div class="bg">
             <h1>MisMatronas.com</h1>
-            <a href=index.jsp><button class="button2">Pagina Principal</button></a>
+            <a href=../index.jsp><button class="button2">Pagina Principal</button></a>
             <a href=Usuaria.jsp><button class="button2">Usuaria</button></a>
             <% request.setCharacterEncoding("UTF-8");%>
             <h3>Modificación Usuaria</h3>
